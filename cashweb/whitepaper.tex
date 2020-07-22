@@ -82,7 +82,7 @@ Some providers still provide paid email access while essentially offering privac
 
 Again, in non-email systems, our identity is increasingly tied to our email or phone numbers. This association means that there is a clear association between all other accounts and digital interactions. Being able to collate all this data about a user, and form a more complete profile, is extremely valuable to advertisers.
 
-Indeed, various companies(e.g. LiveRamp) purchase data across multiple services, and collate it based on emails and phone numbers. Device fingerprinting is also employed to combine this data with ones web browsing history. Device fingerprints also provide a way to associate email addresses and phone numbers should users log in to two different accounts during the same session or on the same computer.
+Indeed, various companies(e.g. LiveRamp) purchase data across multiple services, and collate it based on emails and phone numbers. Device fingerprinting is also employed to combine this data with one's web browsing history. Device fingerprints also provide a way to associate email addresses and phone numbers should users log in to two different accounts during the same session or on the same computer.
 
 The stated purpose of this is to provide highly-specific advertising. This may be desirable to users in finding products they want. However, are many other purposes this data is used for which are of concern. These other uses are outside the scope of this paper.
 
@@ -126,7 +126,7 @@ In order to maintain secure communication, and the permissionless nature of the 
 
 Traditional systems require trusted third parties and complex integration's with the traditional banking system. Visionaries like Hal Finney conceived of this problem being solved through "reusable proof of work" (RPoW). However, his original design was impractical, but ultimately made possible through the use of Bitcoin Tokens.
 
-Unfortunately, the Bitcoin network does not support the transaction volume which would be associated with a widely used messaging system. Most other cryptocurrency systems also do not intend to support volumes on the order of email (sans spam). The ones that do support these volumes have centrally managed economic policies. Such management would give them authority over the ability to send and receive messages.
+Unfortunately, the Bitcoin network does not support the transaction volume which would be associated with a widely used messaging system. Most other cryptocurrency systems also do not intend to support volumes on the order of email (sans spam). The ones that do support these volumes have centrally managed economic policies. Such management would give them the ability to censor incoming and outgoing messages.
 
 Thus, Bitcoin Cash was selected due to its roadmap being highly compatible with the requirements of the CashWeb project. The roadmap purports to desire to support the majority of payments on earth. Also, It uses a proof-of-work with no central issuing authority for tokens issuance.
 
@@ -134,7 +134,7 @@ Additionally, using a cryptocurrency, instead of traditional banking integration
 
 \subsubsection{Identity}
 
-Each user identity is pseudonymous, and associated with a public key. These public identities can be easily an inexpensively generated from a single master key. Each identity key is acknowledged by the network via various small payments to the miners of the Bitcoin Cash network which include a cryptographically verifiable commitment to the identity.
+Each user identity is pseudonymous, and associated with a public key. These public identities can be easily and inexpensively generated from a single master key. Each identity key is acknowledged by the network via various small payments to the miners of the Bitcoin Cash network which include a cryptographically verifiable commitment to the identity.
 
 Additionally, these pseudonyms can be made such that they can be proven to have been derived from another hidden key at a later date. Such proofs enable the specific key associated with a pseudonym to be revoked, and rotated, in a trustless way. This enables the contacts of the pseudonym to be informed without the need for re-establishing trust.
 
@@ -150,7 +150,7 @@ For all messages within the CashWeb system use the Protocol Buffer message forma
 
 The CashWeb protocol includes a network of keyservers which provide a public \& distributed metadata registry. The store is intended to track small amounts of metadata associated with cryptographic keys. This information stored on the keyservers is replicated across the network to provide censorship resistance. A peer-to-peer protocol is included which provides eventual consistency.
 
-This metadata is indexed by the hash of ones public key and includes said public key, a body of information, and a signature covering the body providing integrity, authentication, and non-repudiation. Metadata updates are permissioned by providing valid signatures.
+This metadata is indexed by the hash of ones public key and includes said public key, a body of information, and a signature providing integrity, authentication, and non-repudiation. Metadata updates are permissioned by providing valid signatures.
 
 
 Uploading data to the keyserver is protected by a specific version of the "Proof-of-Payment protocol" (POP protocol) outlined above. This provides a way to anchor on-chain value to specific updates and therefore allowing DoS resistant replication across the keyserver network.
@@ -164,7 +164,7 @@ The specialised CashWeb keyserver has the following benefits over existing GPG i
 
 The CashWeb keyserver can be used for a wide-range of applications (which are eluded to below), however our primary use-case is to record a pointer to the specific relay server managing that users messages. In this way any user with access to the keyserver network and a hosted address, may lookup the address on the keyserver network and then redirect to their specific relay server in order to bootstrap communication. 
 
-Another possible functionality would be revocations of keys in the event that ones private key is lost. It is possible to generate the keys used for identities such that you can revoke, and notify contacts automatically, of a new key. This allows for key-rotation on Bitcoin, which has been a significant deficiency in cryptocurrencies since the Bitcoin whitepaper was written.
+Another possible function would be revocations of keys in the event that ones private key is lost. It is possible to generate the keys used for identities such that you can revoke, and notify contacts automatically, of a new key. This allows for key-rotation on Bitcoin, which has been a significant deficiency in cryptocurrencies since the Bitcoin whitepaper was written.
 
 \subsubsection{Relay Servers}
 
